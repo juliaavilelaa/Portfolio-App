@@ -6,13 +6,10 @@ export default function Projetos() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Navbar current="projetos" />
-        <Text style={styles.title}>projetos</Text>
+        <Text style={styles.title}>Projetos</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.text}>
-          {/* Adicione seus projetos aqui */}
-          Lista de projetos desenvolvidos ou em andamento.
-        </Text>
+        
       </View>
     </View>
   );

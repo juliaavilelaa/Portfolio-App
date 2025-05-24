@@ -54,19 +54,19 @@ const styles = StyleSheet.create({
   },
   content: {
     alignItems: 'center',
-    marginTop: 60,
-    marginBottom: 40,
+    marginTop: 55,
+    marginBottom: 55,
   },
   foto: {
-    width: 230,
-    height: 230,
-    borderRadius: 115,
-    marginBottom: 60,
+    width: 240,
+    height: 240,
+    borderRadius: 120,
+    marginBottom: 70,
     borderWidth: 2,
     borderColor: '#3C5759',
   },
   buttons: {
-    width: 220,
+    width: 250,
     gap: 16,
   },
   button: {

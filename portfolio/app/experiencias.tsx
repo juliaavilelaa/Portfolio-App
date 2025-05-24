@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import Navbar from './components/navbar';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import Navbar from "./components/navbar";
 
 const skills = [
-  'C++', 'C', 'Java', 'Python', 'HTML', 'CSS',
-  'JavaScript', 'Typescript', 'React', 'React Native', 'MySQL', 'Git', 'VSCode'
+  "C++",
+  "C",
+  "Java",
+  "Python",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Typescript",
+  "React",
+  "React Native",
+  "MySQL",
+  "Git",
+  "VSCode",
 ];
 
 export default function Experiencias() {
@@ -14,18 +31,21 @@ export default function Experiencias() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Navbar current="experiencias" />
-        <Text style={styles.title}>experiências</Text>
+        <Text style={styles.title}>Experiências</Text>
       </View>
-      <ScrollView style={styles.content} contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView
+        style={styles.content}
+        contentContainerStyle={{ paddingBottom: 32 }}
+      >
         {/* Skills */}
         <Text style={styles.sectionTitle}>Linguagens e Ferramentas</Text>
         <View style={styles.skillsContainer}>
-          {skills.map(skill => (
+          {skills.map((skill) => (
             <TouchableOpacity
               key={skill}
               style={[
                 styles.skillBox,
-                hoveredSkill === skill && styles.skillBoxSelected
+                hoveredSkill === skill && styles.skillBoxSelected,
               ]}
               activeOpacity={0.7}
               onPressIn={() => setHoveredSkill(skill)}
@@ -34,7 +54,7 @@ export default function Experiencias() {
               <Text
                 style={[
                   styles.skillText,
-                  hoveredSkill === skill && styles.skillTextSelected
+                  hoveredSkill === skill && styles.skillTextSelected,
                 ]}
               >
                 {skill}
@@ -47,9 +67,9 @@ export default function Experiencias() {
         <Text style={styles.sectionTitle}>Experiência Acadêmica</Text>
         <View style={styles.expBox}>
           <Text style={styles.expText}>
-            • Graduação em Ciência da Computação - UNICAP {"\n"}
-            • Iniciação científica em projetos de lógica e criatividade {"\n"}
-            • Monitoria em disciplinas de programação
+            • Graduação em Ciência da Computação na UNICAP {"\n"}• Programação
+            Competitiva: Projeto UNICAP, Finalista SBC 2024, ICPC Summer School
+            2025
           </Text>
         </View>
 
@@ -57,9 +77,8 @@ export default function Experiencias() {
         <Text style={styles.sectionTitle}>Experiência Profissional</Text>
         <View style={styles.expBox}>
           <Text style={styles.expText}>
-            • Estágio em desenvolvimento de software {"\n"}
-            • Projetos pessoais e colaborativos {"\n"}
-            • Participação em hackathons e eventos de tecnologia
+            • Ainda sem experiência profissional, estou dedicada ao
+            meu desenvolvimento acadêmico e em projetos pessoais.
           </Text>
         </View>
       </ScrollView>
@@ -68,18 +87,18 @@ export default function Experiencias() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#D0D5CE' },
+  container: { flex: 1, backgroundColor: "#D0D5CE" },
   header: {
-    backgroundColor: '#959D90',
+    backgroundColor: "#959D90",
     paddingTop: 90,
     paddingBottom: 16,
     paddingHorizontal: 0,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   title: {
-    fontFamily: 'Platypi-ExtraBold',
+    fontFamily: "Platypi-ExtraBold",
     fontSize: 32,
-    color: '#222',
+    color: "#222",
     marginLeft: 24,
     marginTop: 8,
   },
@@ -87,20 +106,20 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   sectionTitle: {
-    fontFamily: 'Platypi-ExtraBold',
+    fontFamily: "Platypi-ExtraBold",
     fontSize: 22,
-    color: '#192524',
+    color: "#192524",
     marginTop: 18,
     marginBottom: 10,
   },
   skillsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     gap: 0,
     marginBottom: 10,
   },
   skillBox: {
-    backgroundColor: '#3C5759',
+    backgroundColor: "#3C5759",
     borderRadius: 22,
     paddingVertical: 8,
     paddingHorizontal: 18,
@@ -108,25 +127,25 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   skillBoxSelected: {
-    backgroundColor: '#192524',
+    backgroundColor: "#192524",
   },
   skillText: {
-    fontFamily: 'Platypi-ExtraBold',
+    fontFamily: "Platypi-ExtraBold",
     fontSize: 17,
-    color: '#fff',
+    color: "#d1ebdb",
   },
   skillTextSelected: {
-    color: '#fff',
+    color: "#fff",
   },
   expBox: {
-    backgroundColor: '#f5f7f4',
+    backgroundColor: "#f5f7f7",
     borderRadius: 12,
     padding: 16,
     marginBottom: 18,
   },
   expText: {
-    fontFamily: 'Quicksand-Regular',
+    fontFamily: "Quicksand-Regular",
     fontSize: 16,
-    color: '#222',
+    color: "#222",
   },
 });
