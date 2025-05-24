@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Modal, Text, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
 const NAV_OPTIONS = [
-  { href: "/", label: "> home", key: "index" },
+  { href: "/", label: "> início", key: "index" },
   { href: "/sobre-mim", label: "> sobre mim", key: "sobre-mim" },
   { href: "/experiencias", label: "> experiências", key: "experiencias" },
   { href: "/projetos", label: "> projetos", key: "projetos" },

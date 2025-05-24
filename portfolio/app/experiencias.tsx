@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: "#192524",
     marginTop: 18,
-    marginBottom: 10,
+    marginBottom: 15,
   },
   skillsContainer: {
     flexDirection: "row",

@@ -69,7 +69,7 @@ export default function JogoDaSenha() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Navbar current="jogo-da-senha" />
-        <Text style={styles.title}>Jogo da Senha!</Text>
+        <Text style={styles.title}>Jogo da Senha</Text>
       </View>
       <View style={styles.content}>
         <Text style={styles.instructions}>
