@@ -11,7 +11,7 @@ export default function SobreApp() {
   const router = useRouter();
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView style={styles.scrollView} contentContainerStyle={styles.container}>
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => router.push("/")}
@@ -31,48 +31,26 @@ export default function SobreApp() {
           • <Text style={styles.bold}>TypeScript:</Text> Utilizado em todo o projeto para organização do código.
         </Text>
         <Text style={styles.item}>
-          • <Text style={styles.bold}>Expo Router:</Text> Utilizado gerenciar rotas e navegação entre as páginas, incluindo a lógica da Navbar.
+          • <Text style={styles.bold}>Expo Router:</Text> Utilizado para gerenciar rotas e navegação entre as páginas.
         </Text>
         <Text style={styles.item}>
-          •{" "}
-          <Text style={styles.bold}>
-            Componentes Visuais e Interativos (React Native):
-          </Text>
-          {"\n  "}↳ Uso de <Text style={styles.bold}>View, Text, Image</Text>{" "}
-          (para imagens locais dos projetos),{" "}
-          <Text style={styles.bold}>TouchableOpacity</Text> (para botões),{" "}
-          <Text style={styles.bold}>FlatList</Text> (para o carrossel de
-          projetos e histórico do jogo da senha) e{" "}
-          <Text style={styles.bold}>Modal</Text> (para menus e interações).
-        </Text>
-        <Text style={styles.item}>
-          • <Text style={styles.bold}>Estilização e Identidade Visual:</Text>
-          {"\n  "}↳ <Text style={styles.bold}>StyleSheet</Text> para organização dos estilos, e fontes customizadas (
-          <Text style={styles.bold}>Quicksand, Poppins, Platypi</Text>).
-        </Text>
-        <Text style={styles.item}>
-          •{" "}
-          <Text style={styles.bold}>APIs Essenciais (Expo/React Native):</Text>{" "}
-          Integração de funcionalidades como{" "}
-          <Text style={styles.bold}>Alert</Text> (para feedback ao usuário),{" "}
-          <Text style={styles.bold}>Linking</Text> (para navegação a links
-          externos) e <Text style={styles.bold}>Keyboard</Text> (para
-          interação com o teclado).
+          • <Text style={styles.bold}>APIs Essenciais:</Text> Integração de funcionalidades como <Text style={styles.bold}>Alert</Text>, <Text style={styles.bold}>Linking</Text> e <Text style={styles.bold}>Keyboard</Text>.
         </Text>
       </View>
       <Text style={styles.comment}>
-        Projeto individual desenvolvido para a cadeira de Programação Web e
-        Mobile. O objetivo foi criar um currículo/portfólio em React Native para
-        aplicações móveis, apresentando experiências, projetos, habilidades e um
-        mini-jogo interativo.
+        Projeto individual desenvolvido para a cadeira de Programação Web e Mobile. O objetivo foi criar um currículo/portfólio em React Native para aplicações móveis.
       </Text>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scrollView: {
+    flex: 1,
     backgroundColor: "#D0D5CE",
+  },
+  container: {
+    flexGrow: 1,
     alignItems: "center",
     paddingTop: 60,
     paddingHorizontal: 24,
@@ -126,13 +104,6 @@ const styles = StyleSheet.create({
     color: "#3C5759",
     marginTop: 12,
     marginBottom: 8,
-    textAlign: "center",
-  },
-  footer: {
-    fontFamily: "Quicksand-Regular",
-    fontSize: 15,
-    color: "#3C5759",
-    marginTop: 8,
     textAlign: "center",
   },
 });
